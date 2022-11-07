@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>T-MART</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" name="userid"/>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" name="pswrd"/>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" onclick="check(this.form)" value="Login"/>
+        <div class="signup_link">
+          Not a member? <a href="#">Signup</a>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script language="javascript">
+    function check(form) {
+        if(form.userid.value == "tmart" && form.pswrd.value == "tmart") {
+            open("home.html");
+        }
+        else {
+            alert("Error Password or Username");
+        }
+    }
+</script>
+</html>
